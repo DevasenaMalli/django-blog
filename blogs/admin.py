@@ -1,7 +1,7 @@
 from unicodedata import category
 from django.contrib import admin
 
-from blogs.models import Category,Blog
+from blogs.models import Category,Blog ,About,FollowUs
 
 
 class BlogAdmin(admin.ModelAdmin):
@@ -13,3 +13,5 @@ class BlogAdmin(admin.ModelAdmin):
 
 admin.site.register(Category)
 admin.site.register(Blog ,BlogAdmin )
+admin.site.register(About)
+admin.site.register(FollowUs)

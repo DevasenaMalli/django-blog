@@ -33,6 +33,29 @@ class Blog(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at =models.DateTimeField(auto_now=True)
     
-
     def __str__(self):
         return self.title
+
+class About(models.Model):
+    about_heading = models.CharField(max_length=50)
+    about_description = models.TextField(max_length=2000)
+    
+    class Meta:
+        verbose_name_plural = 'About'
+    
+    def __str__(self):
+        return self.about_heading
+    
+class FollowUs(models.Model):
+    followus_headding = models.CharField(max_length=50)
+    link = models.URLField(max_length=200)
+   
+   
+    
+
+    class Meta:
+        verbose_name_plural = 'FollowUs'
+        
+
+    def __str__(self):
+        return self.link
