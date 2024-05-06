@@ -3,6 +3,7 @@ from http.client import HTTPResponse
 from blogs.models import  Blog,Category,FollowUs
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
+from blogs import views as Blogsview
 # Create your views here.
 
 def posts_by_category(request,category_id):
@@ -39,3 +40,5 @@ def search(request):
         'keyword': keyword,
         }
     return render(request,'search.html',context)
+
+
