@@ -28,7 +28,7 @@
           {%for category in categories %}
 
             <tr>
-              <td>{{forloop.count}}</td>
+              <td>{{forloop.counter}}</td>
               <td>{{category}}</td>
               <td>{{category.created_at}}</td>
               <td>{{category.updated_at}}</td>
