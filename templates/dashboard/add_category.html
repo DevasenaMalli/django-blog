@@ -3,23 +3,20 @@
  {% block content %} 
  {% load crispy_forms_tags %}
 
- <div class="container">
-  <div class="row">
-   <!-- left sidebar  -->
-   <div class="col-md-3">
-     {% include 'dashboard/sidebar.html' %}
+<div class="container">
+    <!-- left sidebar  -->
+    <div class="row">
+        {% include 'dashboard/sidebar.html' %}
     </div>
-    
     <!-- Right side content-->
-        <div class="col-md-9">
-           <h2>Add New Category</h2>
-            <form action="{% url 'add_category' %}" method="POST" style="width:500px">
-              {% csrf_token %}
-              {{form | crispy}}
-              <button type="submit" class="btn btn-warning">Submit</button>
-            </form> 
-            <br>
-        </div>
-   </div>
- </div>
+    <div class="col-md-9">
+        <h2>Add New Category</h2>
+        <form action="{% url 'add_category' %}" method="POST" style="width:500px">
+            {% csrf_token %}
+            {{form | crispy}}
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+        <br>
+    </div>
+</div>
 {% endblock content %} 
